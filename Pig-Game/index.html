@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pig Game</title>
+  </head>
+  <body>
+    <div class="modal-div">
+      <button class="btn-info">?</button>
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h1>🎲 How to Play ?</h1>
+
+        <ul>
+          <li>
+            <label class="heading-list">Turn order:</label>
+            <p>Players take turns rolling a single die.</p>
+          </li>
+
+          <li>
+            <label class="heading-list">Rolling:</label>
+            <p>
+              On a turn, a player can roll <em>as many times as they want</em>.
+              Each roll’s number is added to their current round score.
+            </p>
+          </li>
+
+          <li>
+            <label class="heading-list">Rolling a 1:</label>
+            <p>
+              However, if the player rolls a <strong>1</strong>, they
+              <strong>lose all points</strong> from that round, and it becomes
+              the next player's turn.
+            </p>
+          </li>
+
+          <li>
+            <label class="heading-list">Hold:</label>
+            <p>
+              A player can choose to <em>“Hold”</em> at any time. When they
+              hold, their current round score is added to their total score, and
+              their turn ends.
+            </p>
+          </li>
+
+          <li>
+            <label class="heading-list">Winning:</label>
+            <p>
+              The first player to reach <strong>100 total points</strong> wins
+              the game.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="overlay hidden"></div>
+    </div>
+
+    <main>
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">Player 1</h2>
+        <p class="score" id="score--0">43</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--1">Player 2</h2>
+        <p class="score" id="score--1">24</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
+
+      <img src="dice-5.png" alt="Playing dice" class="dice" />
+      <button class="btn btn--new">🔄 New game</button>
+      <button class="btn btn--roll">🎲 Roll dice</button>
+      <button class="btn btn--hold">📥 Hold</button>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
